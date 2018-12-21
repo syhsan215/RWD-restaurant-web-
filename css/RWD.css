@@ -1,0 +1,691 @@
+/* CSS Reset */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* CSS Reset end */
+
+/*=====header=====*/
+
+.header{
+    background-image: url(../images/header_desktop.png);
+    max-width: 100%;height: 420px;
+   
+    background-size: cover;
+    background-position: center center;   /*不懂*/
+
+    position: relative;          /*為漢堡選單定位*/
+}
+
+.head{
+    height: 56px;
+    background-color: rgba(0, 0, 0, 0.6);
+    
+}
+
+.logo{
+    float: left;
+    margin: 16px 0 0 10px;
+}
+
+.logo a {
+    display: block;
+    width: 120px;height: 24px;
+    background-image: url(..\images\avatar_2.png);
+    text-indent: 101%;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.menu{
+    float: right;
+    margin: 20px 10px 0 0;
+}
+
+.menu li{
+    float: left;
+    margin-right: 20px;
+}
+
+.menu a {
+    text-decoration: none;
+    display: block;
+    color: #fff;font-family: 微軟正黑體;
+}
+
+/*=====漢堡選單=====*/
+.openaside{
+    display: none;
+    position: absolute;
+    top: 20px;right: 20px;
+    color: #fff;
+}
+
+@media(max-width:767px){
+    .header{
+        background-image: url(../images/header_mobile.png);
+    }
+    .menu li{
+        display: none;
+    }
+    .openaside{
+        display: block;
+    }
+   .open .menu{
+       float: none;
+       margin: 0;
+       width: 30%;
+       position: fixed;top: 56px;right: 0;
+   }
+   .open .menu a{
+       border-left: 1px solid #fff;
+       background-color: rgba(0, 0, 0, 0.8);
+       padding: 10px;
+   }
+   .open .menu li{
+       display: block;
+       float: none;
+       margin-bottom: 5px;
+   }
+}
+
+/*header裡的透明文字區塊*/
+.title{
+    width: 40%;height: 152px;
+    background-color: rgba(0, 0, 0, 0.6);
+    text-align: center;
+    margin: 30px 0 0 30%;
+}
+.title h1,.title p{
+    color: #fff;
+    font-family: 微軟正黑體;
+    padding-top: 20px;
+}
+.title h1{
+    font-size: 26px;
+}
+.title p{
+    line-height: 1.5;
+}
+
+/*----------------首頁----------------*/
+
+/*=====特色=====*/
+
+.list-special{
+    background-color: #efe9e7;
+    color: #3D1101;
+    
+}
+
+.list-special h1{
+    text-align: center;
+    font-family: 微軟正黑體;
+    padding: 40px;
+    line-height: 1.5;
+}
+.list-special li{
+    float: left;
+    max-width: 15%;
+    margin-left: 13%;
+    text-align: center;
+}
+
+.list-special h2{
+    font-family: 微軟正黑體;
+    padding: 30px;
+}
+.list-special p{
+    font-family: Helvetica;
+    text-align: justify;
+    line-height: 1.3;
+    padding-bottom: 50px;
+}
+@media(max-width:767px){
+    .list-special li{
+        float: none;
+        max-width: 50%;
+        margin:10px auto;
+        text-align: center;
+    }
+    .list-special h1{
+        font-size: 24px;
+    }
+}
+
+
+/*=====今日主廚=====*/
+
+.chef{
+    background-color: #3D1101;
+    
+    color: #fff;font-family: 微軟正黑體;
+}
+.chef img{
+    float: left;
+    max-width: 100%;max-height: 100%;
+    padding-left: 5%;
+}
+
+.chef-content{
+    float: right;
+    padding: 5% 5% 0 0;
+    max-width: 500px;
+    line-height: 1.5;
+    
+}
+.chef-content h1,.chef-content h2,.chef-content p{
+    text-align: justify;
+}
+.chef-content h1{
+    font-size: 18px;
+}
+.chef-content h2{
+    padding-bottom: 10px;
+}
+
+@media(max-width:768px){
+    .chef img{
+        max-width: 100%;max-height: 100%;
+        padding:0 20% 0 20%;
+        float: none;
+    }
+    .chef-content{
+        float: none;
+        padding:5% 20% 5% 20%;;        
+    }
+}
+
+@media(max-width:767px){
+    .chef{
+        height: auto;
+    }
+    .chef img,.chef-content{
+        float: none;
+    }
+    .chef img{
+        width: 100%;
+        margin: 0 auto;padding: 0;height: auto;
+    }
+    .chef-content{
+        width: 70%;margin: 10px auto;padding: 0;
+        height: auto;
+    }
+}
+
+/*=====顧客的話=====*/
+.list-guest{
+    background-color: #efe9e7;
+    color: #3D1101;
+}
+
+.list-guest h1{
+    text-align: center;
+    font-family: 微軟正黑體;font-size: 20px;font-weight: bold;
+    padding: 40px;
+}
+
+
+.guest li{
+    font-family: 微軟正黑體;
+    float: left;
+    max-width: 20%;
+    margin: 10px 0 0 8%;
+}
+
+
+.guest li h3{
+    padding-bottom: 20px;
+}
+.guest li img{
+    vertical-align: middle;
+    margin-right: 10px;
+}
+.guest li p{
+    margin-left: 65px;
+    line-height: 1.5;
+}
+@media(max-width:767px){
+    .guest li{
+        float: none;
+        max-width: 50%;
+        margin:10px auto;
+        text-align: center;
+    }
+}
+
+/*=====map=====*/
+.map{
+    
+    max-width: 80%;
+    padding: 50px 10%;
+}
+.map h1{
+    text-align: center;
+    padding: 50px 0;
+
+}
+.map-pic{
+    float: left;
+    margin-left: 10%;
+}
+.map-pic img{
+    max-width: 100%;
+    max-height: 100%;
+}
+.map-info{
+    float: right;
+    
+    width: 40%;
+}
+.maptext{
+    width: 80%;
+    
+}
+.map-info .pure-button{
+   margin-right: 5%;
+   background-color: #FF5E45;
+}
+
+@media(max-width:768px){
+    .map-info{
+        float: right;
+        
+        width: 90%;
+    }
+}
+@media(max-width:767px){
+
+}
+
+
+
+
+
+
+
+/*--------------------購物車-----------------------*/
+.wrap{
+    background-color: #efe9e7;
+    color: #3D1101;font-family: 微軟正黑體;
+}
+.wrap-cart{
+    margin: 0 auto;
+    max-width: 80%;
+    padding: 30px;
+}
+/*訂購美食置左*/
+.sidebar{
+    float: left;
+    max-width: 20%;
+}
+/*大塊menu內容置右*/
+.product{
+    float: right;
+    max-width: 80%;
+}
+/*訂購美食sidebar樣式*/
+.sidebar h1{
+    font-size: 18px;font-weight: bold;
+    margin: 10px 0;
+}
+.sidebar li{
+    width: 100%;
+    border-bottom: #3D1101 1px solid;
+
+}
+.sidebar a{
+    display: block;
+   
+    padding: 10px;
+    text-decoration: none;
+    color: #3D1101;font-family: 微軟正黑體;
+    
+}
+.sidebar a:hover{
+    background-color: #3D1101;color: #efe9e7;
+}
+
+
+
+/*搜尋欄位置左*/
+.search{
+     float: left;
+     
+}
+.btn{
+    float: right;
+    display: block;
+    height: 25px;width: 20px;
+    background-color: #3D1101;
+    padding: 2px;
+    border-top: #3D1101 2px solid;
+    color: #fff;
+    text-align: center;
+    line-height: 25px;
+}
+.searchtext{
+    float: left;
+    border: #3D1101 2px solid;
+    height: 25px;width: 500px;
+    background-color:rgba(241, 234, 234, 0.6);
+}
+
+/*結帳去置右*/
+.checkout{
+    float: right;
+    margin-right: 20px;
+}
+.checkout a{
+    color: #3D1101;
+    text-decoration: none;
+    font-weight: bold;
+}
+.checkout li{
+    display: inline;
+    margin-left: 2px;
+}
+/*菜單內容*/
+
+.productlist{
+    width: 100%;height: auto;
+   margin:50px 0 50px 0;
+}
+.productlist li {
+    float: left;
+    width: 30.33333%;
+    margin-right: 3%;margin-bottom: 3%;
+    position: relative;
+    box-shadow: 5px 5px 5px #888888; 
+    
+}
+.productlist img{
+    width: 100%;
+}
+
+
+.heartbtn{
+    position: absolute;left: 5px;top: 5px;
+    color: #fff;
+}
+.heartbtn:hover{
+    color: red;
+}
+.productlist h1,p{
+    text-align: center;
+}
+.productlist h1{
+    padding: 15px;
+}
+.price{
+    padding: 50px 0 10px 0;
+}
+
+.addCart {
+    display: block;
+    border: #FF5E45 2px solid;
+    border-radius: 5px;
+    color: #FF5E45;
+    padding: 3px;text-align: center;
+    width: 70%;text-decoration: none;
+    margin:0  0 5% 15%;
+}
+.addCart:hover{
+    color: #fff;background-color: #FF5E45;
+}
+
+@media(max-width:768px){
+    .wrap-cart{
+        max-width: 100%;
+    }
+    .searchtext{
+        width: 300px;
+    }
+}
+@media(max-width:767px){
+    .sidebar,.product{
+        float: none;
+    }
+    .sidebar{
+        max-width: 80%;
+    }
+    .searchtext{
+        width: 220px;
+    }
+   .product{
+       margin-top: 30px;
+       max-width: 100%;
+   }
+   .checkout{
+       margin-top: 20px;
+   }
+   .productlist li{
+       float: none;
+       width: 90%;
+       margin: 10px auto 10px auto;
+   }
+  
+  
+}
+
+/*-------------------------購物車end-------------------------------*/
+
+/*---------------------------login--------------------------------*/
+.wrap-login{
+    padding: 30px 0 50px 0;
+    background-color: #efe9e7;
+    color: #3D1101;font-family: 微軟正黑體;
+}
+
+.same{
+    max-width: 300px;
+    margin: 0 auto;
+}
+.same h2{
+    margin: 10px 0 30px 0;
+}
+.same h1,.same h2{
+    text-align: center;
+    font-weight: bold;
+}
+
+.login .pure-form-stacked{
+    border-top: #FF5E45 3px solid;
+    padding: 0 5%;
+    box-shadow: 3px 3px 10px gray;
+}
+.same .pure-form-stacked .inputtext{
+    width: 90%;
+    margin-bottom: 20px;
+}
+
+
+.same .pure-form-stacked .pure-button{
+    width: 40%;
+    background-color: #FF5E45;
+    margin-left: 6%;
+    margin-top: 20px;
+}
+
+/*-----------------------login end----------------------------*/
+
+/*---------------------register start-------------------------*/
+.register{
+    max-width: 60%;
+    margin: 0 auto;
+}
+
+.register-content{
+    float: left;
+    max-width: 40%;
+    padding: 50px 5% 50px 5%;
+}
+.register-content h2,.register-content p{
+    text-align: justify;
+}
+.register .register-all .register-form{
+   display: inline; 
+}
+.register .register-form .pure-form-stacked{
+    max-width: 90%;
+}
+
+.relogin{
+    text-decoration: none;
+    color: #FF5E45;
+}
+.register-all{
+    border-top: #FF5E45 3px solid;
+    padding: 0 5%;
+    box-shadow: 3px 3px 10px gray;
+}
+.register .pure-form-stacked .pure-button{
+    margin-left: 50%;
+}
+
+@media(max-width:768px){
+    .register-content{
+        float: none;
+        max-width: 80%;
+        padding: 50px 5% 50px 5%;
+    }
+    .register-form{
+        display: block;
+        margin:0 auto ;
+    }
+    .register .register-form .pure-form-stacked{
+        max-width: 80%;
+        padding: 0 10%;
+    }
+}
+
+/*-----------------register end--------------------*/
+
+
+/*=====footer=====*/
+
+.footer{
+    background: #efe9e7;
+    height: 200px;
+}
+/*關於六角餐廳*/
+.footer-content{
+    float: left;line-height: 1.5;
+    width: 20%;
+    padding: 30px 0 0 10%;
+    font-family: 微軟正黑體;
+    font-size: 14px;color: #3D1101;
+}
+.footer-content h1{
+    font-size: 18px;
+    margin-bottom: 4pt;
+}
+/*聯絡我們*/
+.contact{
+    float: left;line-height: 1.8;
+    width: 25%;
+    padding: 30px 0 0 10%;
+    font-family: 微軟正黑體;
+    font-size: 14px;color: #3D1101;
+}
+.contact h1{
+    font-size: 18px;
+}
+/*追蹤我們*/
+.follow{
+   float: right;
+   padding: 30px 3% 50px 0;   /*下50px是為了手機版本跟下面的距離*/
+}
+.follow li{
+    float: right;
+    margin-right: 20px;
+}
+.footer-logo a{
+    display: block;
+    background-image: url(../images/footer-logo.png);
+    background-repeat: no-repeat;
+    width: 243px;height: 55px;
+    text-indent: -99999px;
+    margin-bottom: 20px;
+}
+.clearfix{
+    clear: both;
+}
+@media(max-width:768px){
+    .footer{
+        height: auto;   
+    }
+}
+@media(max-width:767px){
+    .title{
+        width: 70%;
+        margin: 30px auto 0 auto;
+    }
+    .footer{
+        height: auto;   
+    }
+    .footer-content,.contact{
+        float: none;
+        width: 80%;
+        padding: 30px 0 0 10%;                                               
+    }
+    .follow{
+        float: right;
+    }  
+}
+
+/*======top======*/
+.top{
+    position: fixed;
+    bottom: 40px;right: 40px;
+}
+.top a{
+    color: #3D1101;
+}
+.top a:hover{
+    color: #FF5E45;
+}
+
